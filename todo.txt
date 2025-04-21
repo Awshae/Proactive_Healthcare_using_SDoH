@@ -9,19 +9,23 @@ Load the raw data.
 Clean and transform the data.
 Create lag, rolling window, and time features.
 Save the processed data to the data/processed/ directory.
+
+
 2. Model Training and Evaluation:
 
 Train the Model:
-Create a script (e.g., train.py) that uses models/training.py to:
+train.py that uses models/training.py to:
 Load the processed data.
 Define the features and target variable.
 Scale the data.
 Train the LSTM model.
 Save the trained model to models/trained_model.pkl.
 Evaluate the Model:
-Create a script (e.g., evaluate.py) that uses models/evaluation.py to:
+eval.py that uses models/evaluation.py to:
 Load the processed data and the trained model.
 Calculate and print the evaluation metrics (MSE, MAE, RMSE).
+
+
 3. API Development:
 
 Implement API Routes:
@@ -35,6 +39,8 @@ Include error handling, and input validation.
 Implement security:
 Use the security.py file to encrypt, decrypt, and hash data.
 Use access control to only allow authorized users access to the api.
+
+
 4. Risk Assessment and Forecasting:
 
 Implement Forecasting Logic:
@@ -42,12 +48,16 @@ Create a script or integrate into the API that uses services/risk_assessment.py 
 Load the trained model.
 Generate forecasts for future time steps.
 Calculate risk scores based on the forecasts.
+
+
 5. Testing:
 
 Unit Tests:
 Write unit tests in the tests/ directory using unittest or pytest to verify the functionality of individual modules (e.g., test_forecasting.py, test_data_ingestion.py).
 Integration Tests:
 Write integration tests to verify the interaction between different modules (e.g., API endpoints, data processing pipeline).
+
+
 6. Deployment:
 
 Dockerization:
@@ -60,6 +70,8 @@ Ensure that the cloud infrastructure is HIPAA compliant.
 Environment Variables:
 Use the .env file to store sensitive data, and configuration parameters.
 Never hard code sensitive information into the code.
+
+
 7. Monitoring and Maintenance:
 
 Logging:
@@ -70,6 +82,8 @@ Model Retraining:
 Implement a process for periodically retraining the model with new data to maintain its accuracy.
 Data Updates:
 Create a system that automatically updates the data from the different sources.
+
+
 8. Web Interface:
 
 Create a web interface that can display the results of the api.
